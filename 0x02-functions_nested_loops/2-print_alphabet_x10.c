@@ -2,7 +2,8 @@
 
 /**
  *print_alphabet - Print alphabet in lowercase
- *
+ *print te times
+ *desc: The function uses nested for loop
  *Return: no return
 */
 
