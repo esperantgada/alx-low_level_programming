@@ -16,11 +16,10 @@ void print_to_98(int n)
 		{
 			printf("%d, ", m);
 		{
-		printtf("\n");
+		printf("\n");
 
 	}
-
-	else
+       else
 	{
 		for (m = n; m <= 98; m++)
 		{
