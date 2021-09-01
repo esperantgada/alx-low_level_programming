@@ -1,23 +1,19 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- *print_alphabet - Print alphabet in lowercase
- *print ten times
- *desc: The function uses nested for loop
- *Return: no return
+*print_alphabet_x10 - print 10 times the alphabet, in lowercase.
+*
+*Return: Always 0.
 */
-
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int j, i;
 
-	for (i = 0; i < 10; i++)
+	for (j = 1; j <= 10; j++)
 	{
-		for (j = 'a'; j <= 'z'; j++)
+		for (i = 'a'; i <= 'z'; i++)
 		{
-			_putchar(j);
+			_putchar(i);
 		}
 		_putchar('\n');
 	}
-
 }
