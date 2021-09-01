@@ -1,41 +1,45 @@
-#include "main.h"
+#include <stdio.h>
 /**
-*print_times_table - prints times table with
-*parameter
-*@n: value
-*Return: returns nothing
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
 */
-void print_times_table(int n)
+int main(void)
 {
-int digit, mult, result;
-if (n <= 15 && n >= 0)
-{
-for (digit = 0; digit <= n; digit++)
-{
-_putchar('0');
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
 
-for (mult = 1; mult <= n; mult++)
+for (inc = 0; inc < 92; inc++)
 {
-_putchar(',');
-_putchar(' ');
-result = digit * mult;
-if (result <= 99)
-_putchar(' ');
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
+}
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
+{
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
 
-if (result <= 9)
-_putchar(' ');
-if (result >= 100)
-{
-_putchar((result / 100) + '0');
-_putchar((result / 10) % 10 + '0');
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
 }
-else if (result <= 99 && result >= 10)
-{
-_putchar((result / 10) + '0');
-}
-_putchar((result % 10) + '0');
-}
-_putchar('\n');
-}
-}
+printf("\n");
+return (0);
 }
