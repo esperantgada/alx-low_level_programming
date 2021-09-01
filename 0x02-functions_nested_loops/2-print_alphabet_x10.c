@@ -2,9 +2,8 @@
 
 /**
  *print_alphabet - Print alphabet in lowercase
- *print te times
+ *print ten times
  *desc: The function uses nested for loop
- *print_alphabet - Print alphabet in lowercase ten times
  *Return: no return
 */
 
