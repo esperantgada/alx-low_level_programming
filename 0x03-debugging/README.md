@@ -1,0 +1,1 @@
+**This project is about debugging, technics of debugging a code**
