@@ -7,25 +7,25 @@
 */
 int main(void)
 {
-int digit1, digit2;
-for (digit1 = 0; digit1 <= 98; digit1++)
-{
-for (digit2 = digit1 + 1 ; digit2 <= 99; digit2++)
-{
-putchar((digit1 / 10) + '0');
-putchar((digit1 % 10) + '0');
-putchar(32);
-putchar((digit2 / 10) + '0');
-putchar((digit2 % 10) + '0');
+    int i, j;
 
-if (digit1 / 10 != 9 || digit1 % 10 != 8)
-{
-putchar(44);
-putchar(32);
-}
+	for (i = 0; i <= 98; i++)
+    {
+        for (j = i + 1; j <= 99; j++)
+        {
+            putchar(i / 10 + '0');
+            putchar(i % 10 + '0');
+            putchar(32);
+            putchar(j / 10 + '0');
+            putchar(j % 10 + '0');
 
-}
-}
-putchar(10);
-return (0);
+            if (!((i / 10 == 9) && (i % 10 == 8)))
+            {
+                putchar(44);
+                putchar(32);
+            }
+        }
+    }
+    putchar('\n');
+    return (0);
 }
