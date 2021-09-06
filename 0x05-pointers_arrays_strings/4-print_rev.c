@@ -2,7 +2,7 @@
 /**
 * print_rev - prints a string in reverse
 * @s: string to print
-*Return: return a string 
+*Return: return a string
 */
 
 void print_rev(char *s)
@@ -27,13 +27,12 @@ void print_rev(char *s)
  */
 int _strlen(char *s)
 {
-        int i, compt = 0;
+	int i, compt = 0;
 
-        for (i = 0; s[i] != '\0'; i++)
-        {
-                compt++;
-        }
-
-        return (compt);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		compt++;
+	}
+	return (compt);
 
 }
