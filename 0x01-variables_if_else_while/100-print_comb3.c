@@ -5,27 +5,29 @@
 *
 *Return: returns 0
 */
-int main(void)
+int main()
 {
-int digit1, digit2;
-for (digit1 = 0; digit1 < 9; digit1++)
-{
-for (digit2 = digit1 + 1 ; digit2 < 10; digit2++)
-{
+    int n,m;
 
-putchar((digit1 % 10) + '0');
-putchar((digit2 % 10) + '0');
+    for (n = 0; n <= 9; n++)
+    {
+        for (m = n + 1; m <= 9; m++)
+        {
+            putchar(n + '0');
+            putchar(m + '0');
 
-if (digit1 == 8 && digit2 == 9)
-continue;
+            if (n == 8 && m == 9)
+            {
+                continue;
+            }
+            putchar(';');
+            putchar(' ');
+        }
 
-putchar(',');
-putchar(' ');
 
-}
+    }
+    
+    putchar('\n');
 
-
-}
-putchar('\n');
-return (0);
+    return (0);
 }
