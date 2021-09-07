@@ -41,13 +41,13 @@ int _strlen(char *s)
 
 
 /**
- * swap_int - swap two characters
+ * swap_char - swap two characters
  * @a: char pointer type
  * @b: char pointer type
  */
 void swap_char(char *a, char *b)
 {
-        char c;
+	char c;
 
 	c = *a;
 	*a = *b;
