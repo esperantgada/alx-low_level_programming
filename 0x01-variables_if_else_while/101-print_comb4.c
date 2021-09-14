@@ -1,10 +1,12 @@
 #include <stdio.h>
+
 /**
 *main - Prints all combinations of three digits with,
 * and space followed by new line
 *
 *Return: returns 0
 */
+
 int main(void)
 {
     int n, m, d;
