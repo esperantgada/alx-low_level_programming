@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
 *main - program that prints either number
 *or fizz or buzz or fizzBuzz
@@ -6,29 +7,41 @@
 *
 *Return: returns 0
 */
+
 int main(void)
 {
-int num;
-while (num++ < 100)
+	int n;
 
-if ((num % 3 == 0) && (num % 5 == 0))
-printf("FizzBuzz ");
+	while (n++ < 100)
 
-else if ((num % 3) == 0)
-printf("Fizz ");
+		if ((n % 3 == 0) && (n % 5 == 0))
+		{
+			printf("FizzBuzz ");
+		}
 
-else if ((num % 5) == 0)
-{
-if (num != 100)
-printf("Buzz ");
+		else if ((n % 3) == 0)
+		{
+			printf("Fizz ");
+		}
 
-else
-printf("Buzz");
-}
+		else if ((n % 5) == 0)
+		{
+			if (n != 100)
+			{
+				printf("Buzz ");
+			}
 
-else
-printf("%d ", num);
+			else
+			{
+				printf("Buzz");
+			}
+		}
 
-printf("\n");
-return (0);
+		else
+		{
+			printf("%d ", n);
+		}
+
+	printf("\n");
+	return (0);
 }
