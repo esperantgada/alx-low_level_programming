@@ -7,6 +7,7 @@
  *
  * Return: The length of the string.
  */
+
 int find_len(char *str)
 {
 	int len = 0;
