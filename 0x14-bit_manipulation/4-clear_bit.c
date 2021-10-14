@@ -1,5 +1,3 @@
-#include  "main.h"
-
 /**
 *getp - returns the value of x to the power of y.
 *@x: number.
