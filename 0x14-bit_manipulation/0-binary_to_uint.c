@@ -49,24 +49,24 @@ int getp(int x, int y)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n, length, i;
+	unsigned int n, l, i;
 	int power;
 
 	if (!b)
 		return (0);
 
-	length = _strlen(b);
+	l = _strlen(b);
 	power = 0;
 	n = 0;
-	i = length - 1;
-	while (length > 0)
+	i = l - 1;
+	while (l > 0)
 	{
 		if (b[i] == 48 || b[i] == 49)
 		{
 			n = n + ((b[i] - 48) * getp(2, power));
 			power++;
 			i--;
-			length--;
+			l--;
 		}
 		else
 		{
