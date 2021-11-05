@@ -10,7 +10,8 @@
  * @new: new node to add to the list
  *
  * Return: pointer to the new list
- */
+*/
+
 listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 {
 	listint_t **newlist;
@@ -34,32 +35,33 @@ listint_t **_ra(listint_t **list, size_t size, listint_t *new)
  * @head: double pointer to the start of the list
  *
  * Return: the number of nodes in the list
- */
+*/
+
 size_t free_listint_safe(listint_t **head)
 {
-	size_t i, num = 0;
+	size_t i, n = 0;
 	listint_t **list = NULL;
 	listint_t *next;
 
 	if (head == NULL || *head == NULL)
-		return (num);
+		return (n);
 	while (*head != NULL)
 	{
-		for (i = 0; i < num; i++)
+		for (i = 0; i < n; i++)
 		{
 			if (*head == list[i])
 			{
 				*head = NULL;
 				free(list);
-				return (num);
+				return (n);
 			}
 		}
-		num++;
-		list = _ra(list, num, *head);
+		n++;
+		list = _ra(list, n, *head);
 		next = (*head)->next;
 		free(*head);
 		*head = next;
 	}
 	free(list);
-	return (num);
+	return (n);
 }
