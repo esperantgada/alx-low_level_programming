@@ -6,6 +6,7 @@
 * @argv: arguments file to and file from
 * Return: 0 for success
 **/
+
 int main(int argc, char *argv[])
 {
 	char *from_name, *to_name, buff[1024];
